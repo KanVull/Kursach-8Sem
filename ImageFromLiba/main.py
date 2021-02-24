@@ -1,5 +1,5 @@
 import sys
-sys.path.append('biba')
+sys.path.append("C:\\Users\\minir\\AppData\\Roaming\\liba")
 
 import cv2
 import numpy as np
