@@ -59,7 +59,7 @@ list_paths = [
 ]
 
 # count of images of every classes
-numberOfImages = 10
+numberOfImages = 50
 
 # Loading lists of images
 # [ 
