@@ -77,6 +77,15 @@ RandomImages = [ [uploadImage(pathOfImage) for pathOfImage in random.sample(path
 #   [ (recognized, expected), .. , (recognized, expected) ],
 #   [ (recognized, expected), .. , (recognized, expected) ], 
 # ]
+
+# Formating grid of images
+# image = np.concatenate(
+#     [np.concatenate([RandomImages[1][i*j + i] for i in range(20)], axis=1) for j in range(20)],
+#     axis=0
+# )
+# im = Image.fromarray(image)
+# im.show()
+
 predictions_list = [
     [ (classes[recognize( image, model_Bar )], classes[0]) for image in RandomImages[0] ],
     [ (classes[recognize( image, model_Bar )], classes[1]) for image in RandomImages[1] ],

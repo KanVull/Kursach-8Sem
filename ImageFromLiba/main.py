@@ -46,7 +46,7 @@ for imagename in os.listdir(filepath):
     binmap = np.zeros_like(image)
     keyvals = bar[0].getPoints().items()
     for p in keyvals:
-        binmap[p[0].y,p[0].x] += p[1]  
+        binmap[p[0].y, p[0].x] += p[1]  
 
 
     # image =  cv2.resize(image,  (400, 400))
