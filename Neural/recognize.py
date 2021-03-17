@@ -59,7 +59,8 @@ list_paths = [
 ]
 
 # count of images of every classes
-numberOfImages = 50
+numberOfImages = 400
+
 
 # Loading lists of images
 # [ 
@@ -79,19 +80,19 @@ RandomImages = [ [uploadImage(pathOfImage) for pathOfImage in random.sample(path
 # ]
 
 # Formating grid of images
-# image = np.concatenate(
-#     [np.concatenate([RandomImages[1][i*j + i] for i in range(20)], axis=1) for j in range(20)],
-#     axis=0
-# )
-# im = Image.fromarray(image)
-# im.show()
+image = np.concatenate(
+    [np.concatenate([RandomImages[3][i*j + i] for i in range(20)], axis=1) for j in range(20)],
+    axis=0
+)
+im = Image.fromarray(image)
+im.show()
 
-predictions_list = [
-    [ (classes[recognize( image, model_Bar )], classes[0]) for image in RandomImages[0] ],
-    [ (classes[recognize( image, model_Bar )], classes[1]) for image in RandomImages[1] ],
-    [ (classes[recognize( image, model_RAW )], classes[0]) for image in RandomImages[2] ],
-    [ (classes[recognize( image, model_RAW )], classes[1]) for image in RandomImages[3] ],
-]
+# predictions_list = [
+#     [ (classes[recognize( image, model_Bar )], classes[0]) for image in RandomImages[0] ],
+#     [ (classes[recognize( image, model_Bar )], classes[1]) for image in RandomImages[1] ],
+#     [ (classes[recognize( image, model_RAW )], classes[0]) for image in RandomImages[2] ],
+#     [ (classes[recognize( image, model_RAW )], classes[1]) for image in RandomImages[3] ],
+# ]
 
 for i in range(4):
     err = 0
