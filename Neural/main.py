@@ -66,11 +66,11 @@ print(model.summary())
 
 history = model.fit(images_train, names_train, 
                     batch_size=200, 
-                    epochs=50,  #иначе 100
+                    epochs=50, 
                     verbose=1)
 
 os.chdir(os.path.dirname(os.path.realpath(__file__)))
-model.save('RAW_model.h5')
+model.save('BarPy_model.h5')
 
 predictions = model.predict(images_test)
 n = 0

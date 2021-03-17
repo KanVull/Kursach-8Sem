@@ -59,7 +59,7 @@ list_paths = [
 ]
 
 # count of images of every classes
-numberOfImages = 400
+numberOfImages = 30
 
 
 # Loading lists of images
@@ -87,12 +87,12 @@ RandomImages = [ [uploadImage(pathOfImage) for pathOfImage in random.sample(path
 # im = Image.fromarray(image)
 # im.show()
 
-# predictions_list = [
-#     [ (classes[recognize( image, model_Bar )], classes[0]) for image in RandomImages[0] ],
-#     [ (classes[recognize( image, model_Bar )], classes[1]) for image in RandomImages[1] ],
-#     [ (classes[recognize( image, model_RAW )], classes[0]) for image in RandomImages[2] ],
-#     [ (classes[recognize( image, model_RAW )], classes[1]) for image in RandomImages[3] ],
-# ]
+predictions_list = [
+    [ (classes[recognize( image, model_Bar )], classes[0]) for image in RandomImages[0] ],
+    [ (classes[recognize( image, model_Bar )], classes[1]) for image in RandomImages[1] ],
+    [ (classes[recognize( image, model_RAW )], classes[0]) for image in RandomImages[2] ],
+    [ (classes[recognize( image, model_RAW )], classes[1]) for image in RandomImages[3] ],
+]
 
 for i in range(4):
     err = 0
