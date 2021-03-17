@@ -33,7 +33,7 @@ barcodeFactory.setReturnType(1)
 
 for imagename in os.listdir(filepath):
     image = cv2.imread(filepath + "/" + imagename, 0)
-    
+    cv2.imshow('Image', image)
     container = barcodeFactory.createBarcode(image, struct)
     # Получить первый объекты
     item = container.get(0)
@@ -54,5 +54,7 @@ for imagename in os.listdir(filepath):
     # showImage = np.concatenate((image, binmap), axis=1)
     # cv2.imshow('img', showImage)
     # cv2.waitKey(0)
-    cv2.imwrite(f'../Images/BarCars/{c}.png', binmap)
+    cv2.imshow('Binmap', binmap)
+    # cv2.imwrite(f'../Images/BarCars/{c}.png', binmap)
     c += 1
+    cv2.waitkey(0)
